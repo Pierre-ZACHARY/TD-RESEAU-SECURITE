@@ -4,9 +4,27 @@
       <settings>
         <option name="imageTag" value="framac-novnc" />
         <option name="containerName" value="framac-novnc" />
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="80" />
+              <option name="hostPort" value="6080" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
         <option name="sourceFilePath" value="Dockerfile" />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/workspace" />
+              <option name="hostPath" value="C:\Users\Yukiix\JetBrains\CLionProjects\TD-RESEAU-SECURITE\" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
       </settings>
     </deployment>
-    <method v="2" />
+    <method v="2">
+      <option name="LaunchBrowser.Before.Run" url="http://localhost:6080" />
+    </method>
   </configuration>
 </component>
