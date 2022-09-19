@@ -1,4 +1,7 @@
-FROM fredblgr/framac-novnc:2022
+FROM framac/frama-c:25.0
 
+RUN sudo apk add inotify-tools
 
-RUN /bin/bash -c frama-c
+WORKDIR /workspace/
+
+ENTRYPOINT ./watch.sh

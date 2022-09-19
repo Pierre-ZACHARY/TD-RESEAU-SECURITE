@@ -9,4 +9,3 @@ int compare(int a, int b)
   if (a < b) tmp = - 1;
   if (a > b) tmp = 1;
   return tmp;
-}
