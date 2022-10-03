@@ -13,6 +13,10 @@
     complete behaviors; */
 bool is_negative(int * a, int size)
 {
+    /*@ loop invariant 0 <= i < size ;
+    @ loop invariant \forall integer k; i < k < size ==> a[k] <= 0;
+    @ loop assigns i;
+    @ loop variant size + i; */
   for(int i = size - 1; 0 <= i; i--)
     if (a[i] > 0)
       return false;

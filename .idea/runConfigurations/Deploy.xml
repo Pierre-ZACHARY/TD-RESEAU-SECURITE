@@ -17,7 +17,7 @@
           <list>
             <DockerVolumeBindingImpl>
               <option name="containerPath" value="/workspace" />
-              <option name="hostPath" value="C:\Users\Yukiix\JetBrains\CLionProjects\TD-RESEAU-SECURITE\" />
+              <option name="hostPath" value="$PROJECT_DIR$" />
             </DockerVolumeBindingImpl>
           </list>
         </option>
