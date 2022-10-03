@@ -3,15 +3,9 @@
 /*@ requires size >= 0;
     requires \valid(r);
     requires \valid(a + (0..size-1));
+    ensures *r == 0 ==> \exists integer k; 0<=k<size && a[k] < 0;
+    ensures *r == 1 ==> \forall integer k; 0<=k<size ==> a[k] >= 0;
     assigns *r;
-    behavior positive:
-        assumes \forall integer k; 0<=k<size ==> a[k] >= 0;
-        ensures *r == 1;
-    behavior negative:
-        assumes \exists integer k; 0<=k<size && a[k] < 0;
-        ensures *r == 0;
-    complete behaviors;
-    disjoint behaviors;
  */
 void is_positive(int * a, int size, int * r)
 {
