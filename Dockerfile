@@ -4,4 +4,4 @@ RUN sudo apk add inotify-tools
 
 WORKDIR /workspace/
 
-ENTRYPOINT ./watch.sh
+ENTRYPOINT bash watch.sh

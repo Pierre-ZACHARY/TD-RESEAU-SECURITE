@@ -3,6 +3,7 @@
     <deployment type="dockerfile">
       <settings>
         <option name="imageTag" value="framac-novnc" />
+        <option name="buildCliOptions" value="--no-cache -t" />
         <option name="containerName" value="framac-novnc" />
         <option name="portBindings">
           <list>
